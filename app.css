@@ -1,0 +1,129 @@
+/* app css stylesheet */
+html {
+  overflow-y: scroll;
+}
+body{
+  padding: 0;
+  margin: 0;
+  font-family: segoe ui, Arial, sans-serif;
+}
+h1{
+  font-family:Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+  font-size: xx-large;
+  margin-top: 0.5em;
+  margin-bottom: 0.25em;
+}
+a{
+  color:inherit;
+}
+
+.menu {
+  list-style: none;
+  padding-left:0;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  min-height: 30px;
+  z-index: 999;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li > a{
+  text-decoration: none;
+  color:inherit;
+}
+
+.menu > li:before, li:after {
+  content: "";
+  padding-right: 1em;
+}
+
+.mainBorders{
+  width: 45vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.small{
+  font-size:small;
+}
+
+.alignCenter, .aligncenter{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+.center{
+  text-align: center;
+}
+.left{
+  float:left;
+}
+.right{
+  float:right;
+}
+.excerptImage{
+  height:auto;
+  width:auto;
+  max-width: 660px;
+  max-height: 495px;
+}
+.textLeft{
+  text-align:left;
+}
+.textRight{
+  text-align:right;
+}
+
+.fullWidth{
+  overflow:hidden;
+  margin:auto;
+  height:auto;
+  width:100%;
+}
+
+.spacer{
+  min-height:0.5em;
+}
+
+.top{
+  /* background-color: lightsteelblue; */
+  background:rgba(0,0,0,0.7);
+  position:fixed;
+  top:0;
+  width:100%;
+  color:white;
+}
+
+.embedVideo{
+  height:371px;
+  width:100%;
+  max-width: 660px;
+  margin:0 auto;
+  display: block;
+}
+
+@media only screen and (max-device-width: 480px) and (orientation:portrait),
+only screen and (max-device-height: 480px) and (orientation:landscape)
+{
+  .mainBorders{
+    width: 99vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .excerptImage{
+    height:auto;
+    width:auto;
+    max-width: 100%;
+    max-height: 50%;
+  }
+  .size-large, .size-small, .size-medium, .embedVideo{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 50%;
+  }
+
+}

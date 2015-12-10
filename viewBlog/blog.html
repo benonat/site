@@ -1,0 +1,23 @@
+<div ng-show="blogCtrl.entries.length == 0">Gathering minerals...</div>
+<div ng-repeat="entry in blogCtrl.entries">
+    <div>
+        <h1 ng-bind-html="entry.title"></h1>
+        <!-- <a class="author" href="{{blogCtrl.authorCache[entry.author].url}}">{{blogCtrl.authorCache[entry.author].name}}</a> |-->
+        <span class="date">{{entry.date}}</span>
+
+        <div class="fullWidth">
+            <div class="spacer"></div>
+            <img class="alignCenter excerptImage" ng-show="entry.displayExcerpt" ng-src="{{blogCtrl.excerptImages[entry.excerptImage]}}">
+        </div>
+
+
+        <p ng-bind-html="blogCtrl.display(entry)"></p>
+        <div class="textRight fullWidth small" >
+            <a href ng-click="blogCtrl.toggle(entry)">{{entry.displayExcerpt ? "more" : "less"}}</a>
+        </div>
+
+
+    </div>
+
+    <hr>
+</div>
